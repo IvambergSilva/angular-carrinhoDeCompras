@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+.container-home {
+    position: relative;
+    max-width: 428px;
+    margin: auto;
+    background: $surface-color;
+    height: 100vh;
+    
+    header {
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid $stroke-color;
+        z-index: 2;
+        
+        &>div {
+            display: flex;
+            padding: 24px 32px;
+            justify-content: space-between;
+            font: $number-lg-weight $number-lg-size $font;
+        }    
+    
+        img {
+            cursor: pointer;
+        }
+    }  
+
+    main {
+        padding: 80px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        overflow-y: auto;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}

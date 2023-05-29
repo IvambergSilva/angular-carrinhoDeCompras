@@ -1,0 +1,92 @@
+@import '../../../styles.scss';
+
+.container-footer {
+    border-top: 1px solid $stroke-color;
+    padding: 32px;
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font: $heading-weight $heading-size $font;
+        }
+
+        strong {
+            font: $number-lg-weight $number-lg-size $font;
+        }
+    }
+    
+    .addCoupon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 16px 0 32px;
+        cursor: pointer;
+        height: 50px;
+
+        .tag {
+            background: url('../../../assets/img/Tag.svg') no-repeat center / cover;
+            width: 24px;
+            aspect-ratio: 1/1;
+        }
+
+        .box-inputCoupon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            margin-left: 8px;
+            
+            & > div {
+                width: 130px;
+            }
+
+            input {
+                background: transparent;
+                border: none;
+                height: 24px;
+                width: 130px;
+                outline: none;
+                color: $text-color-secundary;
+                font: $paragraph-weight $paragraph-size $font;
+                
+            
+                &::placeholder{
+                    font: $paragraph-weight $paragraph-size $font;
+                    color: $brand-color-light;
+                }
+            }
+
+            .border {
+                width: 100%;
+                height: 1.5px;
+                background: $brand-color-light;
+            }
+
+            .close {
+                width: 16px;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+            }
+        }
+        
+        
+        &:hover {
+            @include smooth-transition;
+
+            input {
+                &::placeholder {
+                    color: $brand-color-lighter;
+                }
+            }
+            
+            .tag {
+                background: url('../../../assets/img/TagHover.svg') no-repeat center / cover;
+            }
+        }
+
+
+    }
+}

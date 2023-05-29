@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+button {
+    background: $brand-color;
+    color: $text-color-primary;
+    font: $heading-weight $heading-size $font;
+    line-height: $line-height;
+
+    width: 364px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+
+    
+    &:hover {
+        background: $brand-color-light;
+        @include smooth-transition;
+    }
+    
+    &:focus {
+        border: 2px solid $text-color-primary;
+        border-radius: 12px;
+    }
+}
+

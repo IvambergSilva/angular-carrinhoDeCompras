@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #555;
+    color: #FFF;
+}
+
+$font: 'Inter', sans-serif;
+$line-height: 24px;
+
+$number-lg-weight: 700;
+$number-lg-size: 20px;
+
+$heading-weight: 500;
+$heading-size: 18px;
+
+$number-sm-weight: 700;
+$number-sm-size: 16px;
+
+$paragraph-weight: 500;
+$paragraph-size: 16px;
+
+$brand-color: #9333EA;
+$brand-color-light: #A855F7;
+$brand-color-lighter: #C084FC;
+
+$text-color-primary: #F9FAFB;
+$text-color-secundary: #E4E4E7;
+$close-button-color: #A1A1AA;
+$stroke-color: #3F3F46;
+$surface-color: #18181B;
+
+
+@mixin smooth-transition($duration: 0.3s) {
+    transition: all duration ease-in-out;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
