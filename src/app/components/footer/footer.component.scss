@@ -3,6 +3,7 @@
 .container-footer {
     border-top: 1px solid $stroke-color;
     padding: 32px;
+    color: $text-color-primary;
 
     .total {
         display: flex;
@@ -86,7 +87,5 @@
                 background: url('../../../assets/img/TagHover.svg') no-repeat center / cover;
             }
         }
-
-
     }
 }

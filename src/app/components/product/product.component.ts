@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -7,13 +7,21 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
-  title: string = 'WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive';
   maxTitleLength: number = 60;
+  
+  @Input()
+  productImg: string = ''
+  @Input()
+  productTitle: string = '';
+  @Input()
+  productPrice: string = ''
+  @Input()
+  productQuantity: string = ''
 
   manipulatedtitle(): string {
-    if(this.title.length > this.maxTitleLength) {
-      return this.title.substring(0, this.maxTitleLength) + '...';
+    if(this.productTitle.length > this.maxTitleLength) {
+      return this.productTitle.substring(0, this.maxTitleLength) + '...';
     }
-    return this.title
+    return this.productTitle
   }
 }
