@@ -1,13 +1,13 @@
 <div class="container-footer">
     <div class="total">
         <p>Total:</p>
-        <strong>R$ 519,96</strong>
+        <strong>R$ {{ formatNumber(amount) }}</strong>
     </div>
     <div class="addCoupon">
         <div class="tag"></div>
         <div class="box-inputCoupon">
             <div>
-                <input type="text" name="inputAddCoupon" id="inputAddCoupon" placeholder="Adicionar cupom">
+                <input type="text" name="inputAddCoupon" id="inputAddCoupon" placeholder="Adicionar cupom" (click)="addBorder()">
                 
                 <div class="border"></div>
             </div>

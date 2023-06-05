@@ -1,29 +1,18 @@
 <div class="container-home">    
     <header>
         <div class="head">
-            <p>Seu carrrinho tem 3 itens</p>
+            <p #titleCart >Seu carrrinho tem {{ quantityProductsInCart }} itens</p>
             <img src="../../../assets/img/Close.svg" alt="">
         </div>
     </header>
 
-    <main> 
-        <app-product
-            productImg="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
-            productTitle="ens Casual Premium Slim Fit T-Shirts"
-            productPrice="119,99"
-            productQuantity="1"
-        ></app-product>
-        <app-product
-            productImg="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-            productTitle="Mens Cotton Jacket"
-            productPrice="199,99"
-            productQuantity="2"
-        ></app-product>
-        <app-product
-            productImg="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
-            productTitle="Mens Casual Slim Fit"
-            productPrice="79,99"
-            productQuantity="1"
+    <main #main> 
+        <app-product 
+            *ngFor="let item of products"
+            [productId]="item.id"
+            [productImg]="item.image"
+            [productTitle]="item.title"
+            [productPrice]="item.price"
         ></app-product>
     </main>
     

@@ -2,7 +2,7 @@
 
 .container-footer {
     border-top: 1px solid $stroke-color;
-    padding: 32px;
+    padding: 3rem 2rem;
     color: $text-color-primary;
 
     .total {
@@ -25,7 +25,7 @@
         align-items: center;
         margin: 16px 0 32px;
         cursor: pointer;
-        height: 50px;
+        height: 5rem;
 
         .tag {
             background: url('../../../assets/img/Tag.svg') no-repeat center / cover;
@@ -64,6 +64,7 @@
                 width: 100%;
                 height: 1.5px;
                 background: $brand-color-light;
+                display: none;
             }
 
             .close {
